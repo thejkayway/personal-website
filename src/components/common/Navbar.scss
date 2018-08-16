@@ -1,5 +1,5 @@
 @import "src/shared.scss";
-$navbar-color: rgba(94, 43, 128, 0.856);
+$navbar-color: rgb(100, 55, 131);
 
 .navbar {
   list-style-type: none;
@@ -54,7 +54,7 @@ $navbar-color: rgba(94, 43, 128, 0.856);
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: rgba(181, 133, 211, 0.856);
+  background-color: rgba(181, 133, 211, 0.986);
   min-width: 160px;
   z-index: 1;
   color: rgb(26, 132, 219);

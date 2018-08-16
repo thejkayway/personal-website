@@ -1,0 +1,6 @@
+@import "src/shared.scss";
+
+.music-aligner {
+  @include flexitem;
+  height: 90%;
+}
