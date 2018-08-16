@@ -1,0 +1,14 @@
+@import "src/shared.scss";
+
+html, body, .App, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: linear-gradient($bg-pink, $bg-blue);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
