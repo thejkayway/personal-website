@@ -1,0 +1,84 @@
+@import "src/shared.scss";
+$navbar-color: rgba(94, 43, 128, 0.856);
+
+.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: $navbar-color;
+  @include dropshadow;
+}
+
+.navlink {
+  float: left;
+}
+
+.dropdown {
+  float: left;
+}
+
+.aboutlink {
+  float: right;
+}
+
+.navlink a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown a, .dropdown span {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown span {
+  cursor: pointer;
+}
+
+.aboutlink a {
+  background: rgba(89, 38, 122, 0.856);
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgba(181, 133, 211, 0.856);
+  min-width: 160px;
+  z-index: 1;
+  color: rgb(26, 132, 219);
+  @include dropshadow;
+}
+
+
+/* Hover effects */
+.navlink a:hover, .dropdown a:hover, .dropdown span:hover {
+  background-color: rgba(66, 30, 100, 0.808);
+}
+
+.dropdown-content a:hover {
+  background-color: rgba(66, 30, 100, 0.808);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.aboutlink a:hover {
+  background-color: rgba(66, 30, 100, 0.808);
+}
+
+.dropdown:hover {
+  background-color: rgba(66, 30, 100, 0.808);
+}

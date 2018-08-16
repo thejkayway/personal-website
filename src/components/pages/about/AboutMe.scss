@@ -1,0 +1,10 @@
+@import "src/shared.scss";
+
+.aboutme-aligner {
+  @include flexitem;
+  height: 90%;
+
+  ul {
+    list-style: none;
+  }
+}
