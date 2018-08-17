@@ -1,0 +1,17 @@
+@import "src/shared.scss";
+
+.side-drawer-dropdown {
+  background: white;
+  border: 1px solid grey;
+  border-radius: 6px;
+  position: absolute;
+  visibility: hidden;
+  transform: scaleY(0);
+  transition: transform 0.2s ease-out;
+}
+
+.side-drawer-dropdown.open {
+  position: static;
+  visibility: visible;
+  transform: scaleY(1);
+}

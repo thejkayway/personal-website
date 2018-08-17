@@ -1,0 +1,95 @@
+@import "src/shared.scss";
+$mouseover-color: #fa923f;
+$mouseover-background-color: rgba(66, 30, 100, 0.808);
+
+.toolbar {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: $navbar-color;
+  height: 56px;
+  @include dropshadow;
+}
+
+.toolbar__navigation {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.toolbar__logo {
+  margin-left: 1rem;
+
+  a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+  }
+}
+
+.spacer {
+  flex: 1;
+}
+
+.toolbar_navigation-items {
+  height: 100%;
+  ul {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    li {
+      border-radius: 5px;
+      display: flex;
+      height: 80%;
+      align-items: center;
+      padding: 0 0.5rem;
+    }
+  }
+
+
+  a, span, li {
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  }
+}
+
+.toolbar_navigation-items_dropdown {
+  display: flex;
+  justify-content: center;
+  span {
+    padding-top: 4px;
+    font-size: 8px;
+    padding-left: 5px;
+  }
+}
+
+.toolbar_navigation-items a:hover,
+.toolbar_navigation-items a:active,
+.toolbar_navigation-items li:hover,
+.toolbar_navigation-items li:active {
+  background: $mouseover-background-color;
+}
+
+@media (max-width: 768px) {
+  .toolbar_navigation-items {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) {
+  .toolbar__toggle-button {
+    display: none;
+  }
+
+  .toolbar__logo {
+    margin-left: 0;
+  }
+}
