@@ -16,8 +16,22 @@ const toolbar = props => (
         <div className="spacer" />
         <div className="toolbar_navigation-items">
             <ul>
-              <li className='toolbar_navigation-items_dropdown'>experiments<span>▼</span></li>
-              <li className='toolbar_navigation-items_dropdown'>movies<span>▼</span></li>
+              <li>
+                <div className='toolbar_navigation-items_dropdown'>
+                  experiments<span>▼</span>
+                </div>
+                <div className='toolbar_navigation-items_content'>
+                  {/* replace div with ToolbarDropdown*/}
+                </div>
+              </li>
+              <li>
+                <div className='toolbar_navigation-items_dropdown'>
+                  movies<span>▼</span>
+                </div>
+                <div className='toolbar_navigation-items_content'>
+                  {/* replace div with ToolbarDropdown*/}
+                </div>
+              </li>
               <li><Link to='/music'>music</Link></li>
               <li><Link to='/photos'>photography</Link></li>
               <li><Link to='/about'>who?</Link></li>
