@@ -7,7 +7,8 @@ import './App.css';
 
 class App extends Component {
   state = {
-    sideDrawerOpen: false
+    sideDrawerOpen: false,
+    sideDrawerCurrentPage: 'main'
   };
 
   drawerToggleClickHandler = () => {
@@ -16,25 +17,45 @@ class App extends Component {
     });
   };
 
-  backdropClickHandler = () => {
-    this.setState({sideDrawerOpen: false});
+  sideDrawerClosingClickHandler = () => {
+    this.setState({
+      sideDrawerOpen: false,
+      sideDrawerCurrentPage: 'main'});
   };
 
-  sideDrawerLinkClickHandler = () => {
-    this.setState({sideDrawerOpen: false});
+  sideDrawerSubMenuClickHandler = (e) => {
+    if (e.target.classList.contains('experiments-dropdown')){
+      this.setState((prevState) => {
+        return {sideDrawerCurrentPage:'experiments'};
+      });
+    }
+    if (e.target.classList.contains('movies-dropdown')){
+      this.setState((prevState) => {
+        return {sideDrawerCurrentPage:'movies'};
+      });
+    }
+    if (e.target.classList.contains('back')){
+      this.setState((prevState) => {
+        return {sideDrawerCurrentPage:'main'};
+      });
+    }
   };
 
   render() {
     let backdrop;
 
     if (this.state.sideDrawerOpen) {
-      backdrop = <Backdrop click={this.backdropClickHandler} />
+      backdrop = <Backdrop click={this.sideDrawerClosingClickHandler} />
     }
 
     return (
       <div className="App">
         <Toolbar drawerClickHandler={this.drawerToggleClickHandler} />
-        <SideDrawer click={this.sideDrawerLinkClickHandler} show={this.state.sideDrawerOpen} />
+        <SideDrawer
+          closingClick={this.sideDrawerClosingClickHandler}
+          navClick={this.sideDrawerSubMenuClickHandler}
+          show={this.state.sideDrawerOpen}
+          currentPage={this.state.sideDrawerCurrentPage}/>
         {backdrop}
         <Viewport />
       </div>

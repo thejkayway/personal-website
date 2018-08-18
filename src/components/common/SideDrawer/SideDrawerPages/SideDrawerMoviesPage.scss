@@ -1,0 +1,33 @@
+@import "src/shared.scss";
+
+.side-drawer_movies-page {
+  transition: transform 0.2s ease-in;
+  ul {
+    height: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  li {
+    margin: 0.5rem 0;
+  }
+
+  a {
+    color: #521751;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+  }
+}
+
+.side-drawer_movies-page.hide {
+  display: none;
+  transform: translateX(-350%);
+}
+
+.side-drawer a:hover,
+.side-drawer a:active{
+  color: #fa923f;
+}
