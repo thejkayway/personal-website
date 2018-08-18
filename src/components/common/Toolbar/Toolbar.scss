@@ -37,17 +37,13 @@ $mouseover-background-color: rgba(66, 30, 100, 0.808);
 .toolbar_navigation-items {
   height: 100%;
   ul {
-    display: flex;
     height: 100%;
-    align-items: center;
     list-style: none;
     margin: 0;
-    padding: 0;
     display: flex;
     li {
-      border-radius: 5px;
       display: flex;
-      height: 80%;
+      height: 100%;
       align-items: center;
       padding: 0 0.5rem;
     }
