@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import DrawerToggleButton from '../SideDrawer/DrawerToggleButton';
 
 import './Toolbar.css';
+import ToolbarDropdown from '../ToolbarDropdown/ToolbarDropdown';
 
 
 
@@ -16,25 +17,35 @@ const toolbar = props => (
         <div className="spacer" />
         <div className="toolbar_navigation-items">
             <ul>
-              <li>
-                <div className='toolbar_navigation-items_dropdown'>
+              <li className='toolbar_navigation-items_dropdown'>
+                <div className='toolbar_navigation-items_dropdown_button'>
                   experiments<span>▼</span>
                 </div>
-                <div className='toolbar_navigation-items_content'>
-                  {/* replace div with ToolbarDropdown*/}
+                <div className='toolbar_navigation-items_dropdown_content'>
+                  <ToolbarDropdown
+                    links={[
+                      <Link to='/art/console'>console</Link>,
+                      <Link to='/art/fluid'>fluid</Link>
+                    ]}
+                  />
                 </div>
               </li>
-              <li>
-                <div className='toolbar_navigation-items_dropdown'>
+              <li className='toolbar_navigation-items_dropdown'>
+                <div className='toolbar_navigation-items_dropdown_button'>
                   movies<span>▼</span>
                 </div>
-                <div className='toolbar_navigation-items_content'>
-                  {/* replace div with ToolbarDropdown*/}
+                <div className='toolbar_navigation-items_dropdown_content'>
+                  <ToolbarDropdown
+                    links={[
+                      <a href='https://requests.jonathankay.solutions'>request</a>,
+                      <a href='https://plex.tv/web'>watch</a>
+                    ]}
+                  />
                 </div>
               </li>
-              <li><Link to='/music'>music</Link></li>
-              <li><Link to='/photos'>photography</Link></li>
-              <li><Link to='/about'>who?</Link></li>
+              <li className='toolbar_navigation-items_links'><Link to='/music'>music</Link></li>
+              <li className='toolbar_navigation-items_links'><Link to='/photos'>photography</Link></li>
+              <li className='toolbar_navigation-items_links'><Link to='/about'>who?</Link></li>
             </ul>
         </div>
     </nav>
