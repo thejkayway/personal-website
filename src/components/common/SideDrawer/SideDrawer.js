@@ -17,7 +17,7 @@ class SideDrawer extends Component {
       <nav className={drawerClasses}>
         <SideDrawerMainPage
           navClick={this.props.navClick}
-          sidebarClosingClick={this.props.navclick}
+          sidebarClosingClick={this.props.closingClick}
           show={this.props.currentPage==='main'}/>
         <SideDrawerExperimentsPage
           navClick={this.props.navClick}
