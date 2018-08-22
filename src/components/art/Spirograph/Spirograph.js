@@ -62,4 +62,9 @@ export default function spirograph(p) {
       p.clear();
     }
   }
+
+  p.touchEnded = function () {
+      trace = !trace; 
+      p.clear();
+  }
 }

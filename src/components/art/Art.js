@@ -14,7 +14,8 @@ class Art extends Component {
         fluid: "art coming soon: " + choice,
         spirograph: <div>
             <P5Wrapper sketch={Spirograph} />
-            press spacebar
+            <span className='spirograph_nontouch-device'>press spacebar</span>
+            <span className='spirograph_touch-device'>touch screen</span>
           </div>,
       }[this.props.match.params.choice]}
       
