@@ -15,6 +15,7 @@ class SideDrawerExperimentsPage extends Component {
           <li className='side-drawer_back-button back' onClick={this.props.navClick}>⇐</li>
           <li><Link to='/art/console' onClick={this.props.sidebarClosingClick}>console</Link></li>
           <li><Link to='/art/fluid' onClick={this.props.sidebarClosingClick}>fluid</Link></li>
+          <li><Link to='/art/spirograph' onClick={this.props.sidebarClosingClick}>spirograph</Link></li>
         </ul>
       </div>
     );
