@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import P5Wrapper from 'react-p5-wrapper';
+
+// art items
+import Boids from './Boids/Boids'
 import Spirograph from './Spirograph/Spirograph'
+
 import './Art.css';
 
 class Art extends Component {
@@ -10,6 +14,11 @@ class Art extends Component {
     return(
       <div className='art-aligner'>
       {{
+        boids: <div>
+          <P5Wrapper sketch={Boids} />
+          <span className='spirograph_nontouch-device'>click and drag</span>
+          <span className='spirograph_touch-device'>touch and drag</span>
+        </div>,
         console: "art coming soon: " + choice,
         fluid: "art coming soon: " + choice,
         spirograph: <div>
