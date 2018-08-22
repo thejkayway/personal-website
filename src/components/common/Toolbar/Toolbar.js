@@ -24,6 +24,7 @@ const toolbar = props => (
                 <div className='toolbar_navigation-items_dropdown_content'>
                   <ToolbarDropdown
                     links={[
+                      <Link to='/art/boids'>boids</Link>,
                       <Link to='/art/console'>console</Link>,
                       <Link to='/art/fluid'>fluid</Link>,
                       <Link to='/art/spirograph'>spirograph</Link>
