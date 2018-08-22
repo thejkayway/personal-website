@@ -14,19 +14,17 @@ class Art extends Component {
     return(
       <div className='art-aligner'>
       {{
-        boids:
-          <div>
-            <P5Wrapper sketch={Boids} />
-            click and drag
-          </div>,
-        console:
-          "art coming soon: " + choice,
-        fluid:
-          "art coming soon: " + choice,
-        spirograph:
-          <div>
+        boids: <div>
+          <P5Wrapper sketch={Boids} />
+          <span className='spirograph_nontouch-device'>click and drag</span>
+          <span className='spirograph_touch-device'>touch and drag</span>
+        </div>,
+        console: "art coming soon: " + choice,
+        fluid: "art coming soon: " + choice,
+        spirograph: <div>
             <P5Wrapper sketch={Spirograph} />
-            press spacebar
+            <span className='spirograph_nontouch-device'>press spacebar</span>
+            <span className='spirograph_touch-device'>touch screen</span>
           </div>,
       }[this.props.match.params.choice]}
       
