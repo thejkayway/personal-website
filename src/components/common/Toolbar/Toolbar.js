@@ -25,7 +25,8 @@ const toolbar = props => (
                   <ToolbarDropdown
                     links={[
                       <Link to='/art/console'>console</Link>,
-                      <Link to='/art/fluid'>fluid</Link>
+                      <Link to='/art/fluid'>fluid</Link>,
+                      <Link to='/art/spirograph'>spirograph</Link>
                     ]}
                   />
                 </div>
