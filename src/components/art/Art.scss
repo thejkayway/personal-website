@@ -4,3 +4,15 @@
   @include flexitem;
   height: 90%;
 }
+
+@media (min-width: $desktop-min-width) {
+  .spirograph_touch-device {
+    display: none;
+  }
+}
+
+@media (max-width: $mobile-max-width) {
+  .spirograph_nontouch-device {
+    display: none;
+  }
+}
