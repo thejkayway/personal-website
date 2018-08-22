@@ -6,7 +6,7 @@ export default function boids(p) {
   var flock;
 
   p.setup = function() {
-    p.createCanvas(window.innerWidth, window.innerHeight - 100);
+    p.createCanvas(p.windowWidth, p.windowHeight - 75);
     
     flock = new Flock();
     // Add an initial set of boids into the system
@@ -14,6 +14,10 @@ export default function boids(p) {
       var b = new Boid(p.width/2,p.height/2);
       flock.addBoid(b);
     }
+  }
+
+  p.windowResized = function() {
+    p.resizeCanvas(p.windowWidth, p.windowHeight - 75);
   }
 
   p.draw = function() {

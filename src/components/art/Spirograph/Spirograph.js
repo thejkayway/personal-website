@@ -11,15 +11,19 @@ export default function spirograph(p) {
   var trace = false;
 
   p.setup = function() {
-    p.createCanvas(window.innerWidth*0.75, window.innerHeight*0.75);
+    p.createCanvas(p.windowWidth, p.windowHeight*0.75);
     
-    let pseudo_diameter = (window.innerWidth < window.innerHeight*0.75) ? window.innerWidth*0.75 : window.innerHeight*0.75;
+    let pseudo_diameter = (p.windowWidth < p.windowHeight*0.75) ? p.windowWidth*0.75 : p.windowHeight*0.75;
     rad = pseudo_diameter/4;
     p.clear();
 
     for (var i = 0; i<sines.length; i++) {
       sines[i] = p.PI;
     }
+  }
+
+  p.windowResized = function() {
+    p.resizeCanvas(p.windowWidth, p.windowHeight*0.75);
   }
 
   p.draw = function() {
