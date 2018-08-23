@@ -9,8 +9,10 @@ export default function boids(p) {
     p.createCanvas(p.windowWidth, p.windowHeight - 75);
     
     flock = new Flock();
+
     // Add an initial set of boids into the system
-    for (var i = 0; i < 100; i++) {
+    var initialFlocksize = p.windowWidth > 770 ? 60 : 25;
+    for (var i = 0; i < initialFlocksize; i++) {
       var b = new Boid(p.width/2,p.height/2);
       flock.addBoid(b);
     }
@@ -28,6 +30,11 @@ export default function boids(p) {
   // Add a new boid into the System
   p.mouseDragged = function() {
     flock.addBoid(new Boid(p.mouseX,p.mouseY));
+  }
+
+  p.touchMoved = function() {
+    flock.addBoid(new Boid(p.mouseX,p.mouseY));
+    return false;
   }
 
   function Flock() {
