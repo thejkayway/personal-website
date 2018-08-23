@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import P5Wrapper from 'react-p5-wrapper';
-
+import P5Wrapper from '../common/P5Wrapper/P5Wrapper';
 // art items
 import Boids from './Boids/Boids'
 import Spirograph from './Spirograph/Spirograph'
