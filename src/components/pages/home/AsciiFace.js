@@ -9,8 +9,8 @@ import CatAsciiXSmall from './CatAscii.xsmall';
 class AsciiFace extends Component {
   render() {
     return (
-      <div className='ascii-aligner'>
-        <div className='ascii noselect'><CatAsciiXLarge/></div>
+      <div className='ascii-aligner_home'>
+        <div className='ascii_home noselect'><CatAsciiXLarge/></div>
       </div>
     );
   }

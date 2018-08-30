@@ -1,0 +1,26 @@
+@import "src/shared.scss";
+
+.ascii-aligner_fluid {
+  @include flexitem;
+  height: 93%;
+}
+
+.ascii_fluid {
+  display: block;
+  font-weight:bold;
+  white-space:pre;
+  font-family: monospace;
+  color: $blue-text;
+  line-height:18px;
+  font-size: 18px;
+}
+
+.noselect_fluid {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}

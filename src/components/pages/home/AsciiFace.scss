@@ -6,7 +6,7 @@ $fivegrid: "(min-height: 567px) and (max-height: 671px), (min-width: 667px) and 
 $fourgrid: "(min-height: 462px) and (max-height: 566px), (min-width: 562px) and (max-width: 666px)";
 $threegrid: "(max-height: 461px), (max-width: 561px)";
 
-.ascii-aligner {
+.ascii-aligner_home {
   @include flexitem;
   height: 93%;
   @media #{$sixgrid} {
@@ -23,7 +23,7 @@ $threegrid: "(max-height: 461px), (max-width: 561px)";
   }
 }
 
-.ascii {
+.ascii_home {
   display: block;
   font-weight:bold;
   white-space:pre;
@@ -55,7 +55,7 @@ $threegrid: "(max-height: 461px), (max-width: 561px)";
   color: greenyellow;
 }
 
-.noselect {
+.noselect_home {
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
      -khtml-user-select: none; /* Konqueror HTML */
