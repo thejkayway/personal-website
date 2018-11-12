@@ -41,6 +41,9 @@ class SideDrawerMainPage extends Component {
           <li>
             <Link to='/photos' onClick={this.props.sidebarClosingClick}>photography</Link>
           </li>
+          <li>
+            <Link to='/about' onClick={this.props.sidebarClosingClick}>who?</Link>
+          </li>
         </ul>
       </div>
     );
