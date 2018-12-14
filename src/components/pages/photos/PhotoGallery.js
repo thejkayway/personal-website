@@ -106,9 +106,14 @@ const PHOTO_SET = [
     height: 4
   },
   {
-    src: 'https://s3.amazonaws.com/jkayphotostore/kayphoto0.jpg',
-    width: 1,
-    height: 1
+    src: 'https://s3.amazonaws.com/jkayphotostore/kayphoto0.jpeg',
+    width: 3,
+    height: 2
+  },
+  {
+    src: 'https://s3.amazonaws.com/jkayphotostore/kayphoto13.jpeg',
+    width: 3,
+    height: 2
   }
 ];
 
