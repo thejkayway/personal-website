@@ -7,7 +7,7 @@ class AboutMe extends Component {
       <div className='aboutme-aligner'>
         <ul>
           <li>jonathan kay</li>
-          <li><a href='https://github.com/bellyjeans55'>github</a></li>
+          <li><a href='https://github.com/thejkayway'>github</a></li>
         </ul>
       </div>
     );
